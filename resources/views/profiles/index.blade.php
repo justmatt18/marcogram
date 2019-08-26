@@ -25,7 +25,7 @@
         </div>
         <div class="row pt-5">
             @foreach ($user->posts as $post)
-                <div class="col-4">
+                <div class="col-4 py-3">
                     <img class="w-100" src="/storage/{{$post->image}}" alt="">
                 </div>    
             @endforeach
