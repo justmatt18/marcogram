@@ -8,10 +8,14 @@
         </div>
         <div class="col-8 pt-5" id="profile-picture">
             <div class="d-flex justify-content-between align-items-baseline" id="profile-username">
-                <h2>{{ $user->username }}</h2>
-                <a href="{{ route('posts.create') }}" class="btn btn-secondary btn-sm">
-                    <i class="material-icons">add_a_photo</i>
-                </a>
+                    <h2>{{ $user->username }}</h2>
+                    <a href="/post/create" class="btn btn-secondary btn-sm">
+                        <i class="material-icons">add_a_photo</i>
+                    </a>
+                    <a href="/post/create" class="btn btn-secondary btn-sm">
+                        <i class="material-icons">mode_edit</i>
+                        
+                    </a>
             </div>
             <div class="d-flex">
                 <div class="pr-5"><strong>{{ $user->posts->count() }}</strong> posts</div>
@@ -21,13 +25,13 @@
             <div class="pt-4 font-weight-bold"> {{$user->name}} </div>
             <div>{{ $user->profile->title }}</div>
             <div>{{$user->profile->bio}}</div>
-            <div><a href="#">{{ $user->profile->website }}</a></div>
+            <div><a href=" {{$user->profile->website}} ">{{ $user->profile->website }}</a></div>
         </div>
     </div>
     <div class="row pt-5">
         @foreach ($user->posts as $post)
             <div class="col-md-4 col-sm-12 pb-4">
-                <a href="/p/{{ $post->id }}">
+                <a href="/post/{{ $post->id }}">
                     <img src="/storage/{{ $post->image }}" class="w-100">
                 </a>
                 

@@ -40,9 +40,6 @@
                                             <div class="alert alert-danger" role="alert">
                                                     {{ $message }}
                                             </div>
-                                            {{-- <p class="alert"> {{ $message }} </p>
-                                            <strong>{{ $message }}</strong> --}}
-                                            {{-- </span> --}}
                                         </div>
                                     @enderror
                                 </div>
